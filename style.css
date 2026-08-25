@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050816;
+  color: white;
+}
+
+.universe {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at top, #172554 0%, transparent 45%),
+    radial-gradient(circle at bottom, #312e81 0%, #050816 60%);
+}
+
+.hero-content {
+  padding: 30px 20px;
+  max-width: 700px;
+}
+
+.welcome {
+  letter-spacing: 5px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+h1 {
+  font-size: clamp(60px, 15vw, 130px);
+  line-height: 0.85;
+  margin: 25px 0;
+  letter-spacing: -4px;
+}
+
+h1 span {
+  font-weight: 300;
+  opacity: 0.75;
+}
+
+.tagline {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #dbeafe;
+  margin: 30px 0;
+}
+
+/* BUTTONS */
+
+button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.begin-button {
+  padding: 18px 28px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #4338ca, #7c3aed);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+}
+
+/* WORLDS */
+
+.worlds {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+
+  padding: 80px 20px;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.world-card {
+  text-decoration: none;
+  color: white;
+
+  min-height: 320px;
+  padding: 35px 25px;
+
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  transition: transform 0.4s ease;
+}
+
+.world-card:hover {
+  transform: translateY(-10px);
+}
+
+.symbol {
+  font-size: 55px;
+  margin-bottom: auto;
+}
+
+.world-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.world-card p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* THE THREE WORLDS */
+
+.world {
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.8), transparent),
+    linear-gradient(135deg, #064e3b, #0f766e);
+}
+
+.mind {
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.8), transparent),
+    linear-gradient(135deg, #312e81, #6d28d9);
+}
+
+.life {
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.8), transparent),
+    linear-gradient(135deg, #7c2d12, #be185d);
+}
+
+/* SURPRISE PORTAL */
+
+.surprise {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(circle, #312e81 0%, #111827 40%, #050816 75%);
+}
+
+.surprise p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.surprise-button {
+  margin-top: 20px;
+
+  padding: 22px 40px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #f59e0b,
+    #ec4899,
+    #8b5cf6
+  );
+
+  font-size: 16px;
+
+  box-shadow:
+    0 0 20px rgba(236, 72, 153, 0.5),
+    0 0 60px rgba(139, 92, 246, 0.3);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .worlds {
+    padding: 50px 16px;
+  }
+
+  .world-card {
+    min-height: 260px;
+  }
+
+  }
