@@ -332,4 +332,192 @@ button:hover {
     h2 {
         font-size: 1.8rem !important;
     }
+}/* ===================================
+   WORLD / MIND / LIFE JOURNEY CARDS
+   =================================== */
+
+.journey {
+    width: 100%;
+    padding: 90px 6%;
+    box-sizing: border-box;
+    background:
+        radial-gradient(circle at top, rgba(35, 55, 85, 0.35), transparent 45%),
+        #080b12;
 }
+
+.journey > h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 0 0 55px;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.journey-card {
+    position: relative;
+    min-width: 0;
+    min-height: 560px;
+    padding: 42px 30px 30px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    overflow: hidden;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #151923;
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.5);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 18px;
+}
+
+.journey-card h2 {
+    margin: 0 0 16px;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    letter-spacing: 1px;
+}
+
+.journey-card > p {
+    margin: 0 0 12px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+}
+
+.journey-card .small-text {
+    max-width: 340px;
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 28px;
+}
+
+.categories {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categories span {
+    padding: 9px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.journey-card button {
+    margin-top: 28px;
+    width: 100%;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.journey-card button:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* WORLD */
+
+.world-card {
+    background:
+        linear-gradient(180deg, rgba(9, 70, 55, 0.25), rgba(5, 18, 16, 0.95)),
+        linear-gradient(135deg, #246b54, #10251f);
+    border-color: rgba(79, 222, 163, 0.25);
+}
+
+.world-card h2,
+.world-card .card-icon {
+    color: #74f2bd;
+}
+
+.world-card button {
+    background: #4dd89d;
+    color: #082018;
+}
+
+/* MIND */
+
+.mind-card {
+    background:
+        linear-gradient(180deg, rgba(28, 62, 125, 0.30), rgba(8, 15, 34, 0.96)),
+        linear-gradient(135deg, #203f83, #10152d);
+    border-color: rgba(104, 163, 255, 0.28);
+}
+
+.mind-card h2,
+.mind-card .card-icon {
+    color: #72aaff;
+}
+
+.mind-card button {
+    background: #5d9cff;
+    color: #07142c;
+}
+
+/* LIFE */
+
+.life-card {
+    background:
+        linear-gradient(180deg, rgba(125, 73, 25, 0.28), rgba(35, 20, 8, 0.96)),
+        linear-gradient(135deg, #80501d, #281709);
+    border-color: rgba(255, 193, 102, 0.28);
+}
+
+.life-card h2,
+.life-card .card-icon {
+    color: #ffd07b;
+}
+
+.life-card button {
+    background: #f0b85b;
+    color: #2a1807;
+}
+
+/* ===================================
+   MOBILE JOURNEY CARDS
+   =================================== */
+
+@media screen and (max-width: 768px) {
+
+    .journey {
+        padding: 60px 20px !important;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .journey-card {
+        width: 100% !important;
+        min-height: 460px !important;
+        padding: 32px 24px 24px !important;
+    }
+
+    .journey > h2 {
+        margin-bottom: 35px;
+    }
+  }
