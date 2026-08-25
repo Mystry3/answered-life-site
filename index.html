@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Answered Life</title>
 
@@ -13,104 +11,328 @@
 
 <body>
 
-  <main class="universe">
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      ◉ ANSWERED LIFE
+    </div>
 
-    <div class="stars"></div>
+    <nav>
+      <a href="#world">Explore</a>
+      <a href="#mind">Mind Games</a>
+      <a href="#life">Stories</a>
+      <a href="#discover">Handcrafts</a>
+      <a href="#discover">Spirituality</a>
+      <a href="#discover">Numerology</a>
+    </nav>
+
+    <div class="nav-icons">
+      <span>⌕</span>
+      <span>☾</span>
+      <span>◉</span>
+    </div>
+  </header>
+
+
+  <!-- Main Hero -->
+  <main>
 
     <section class="hero">
 
-      <div class="hero-content">
+      <article class="hero-panel world-hero">
+        <div class="hero-content">
+          <h1>EXPLORE<br><span>THE WORLD.</span></h1>
+          <p>A world of cultures, ideas, adventures, stories, mysteries and discoveries.</p>
+          <button onclick="scrollToSection('world')">
+            ◎ Enter the World
+          </button>
+        </div>
+      </article>
 
-        <p class="welcome">
-          WELCOME TO
-        </p>
 
-        <h1>
-          ANSWERED<br>
-          <span>LIFE</span>
-        </h1>
+      <article class="hero-panel mind-hero">
+        <div class="hero-content">
+          <h1>EXPLORE<br><span>THE MIND.</span></h1>
+          <p>Questions, puzzles, psychology and mysteries waiting to be discovered.</p>
+          <button onclick="scrollToSection('mind')">
+            ♧ Challenge Your Mind
+          </button>
+        </div>
+      </article>
 
-        <p class="tagline">
-          Explore the World.<br>
-          Explore the Mind.<br>
-          Explore Life.
-        </p>
 
-        <button class="begin-button"
-                onclick="beginJourney()">
-          ENTER THE UNIVERSE
-        </button>
+      <article class="hero-panel life-hero">
+        <div class="hero-content">
+          <h1>EXPLORE<br><span> LIFE.</span></h1>
+          <p>Stories, creativity, wonder and the beauty of human experience.</p>
+          <button onclick="scrollToSection('life')">
+            ✦ Explore Life
+          </button>
+        </div>
+      </article>
 
+    </section>
+
+
+    <div class="scroll-indicator">
+      ↓
+    </div>
+
+
+    <!-- Destination Cards -->
+    <section class="journey" id="discover">
+
+      <h2>Where will you go today?</h2>
+
+      <div class="journey-grid">
+
+        <article class="journey-card world-card" id="world">
+          <div class="card-icon">🌍</div>
+          <h2>THE WORLD</h2>
+          <p>Cultures. Places. Sceneries. Adventures.</p>
+          <p class="small-text">
+            Discover beauty, diversity and stories from around the world.
+          </p>
+
+          <div class="categories">
+            <span>◎ Cultures</span>
+            <span>⌖ Places</span>
+            <span>⌁ Sceneries</span>
+            <span>♧ Adventures</span>
+          </div>
+
+          <button onclick="showMessage('The World is opening...')">
+            Explore the World →
+          </button>
+        </article>
+
+
+        <article class="journey-card mind-card" id="mind">
+          <div class="card-icon">🧠</div>
+          <h2>THE MIND</h2>
+          <p>Think. Play. Question. Discover.</p>
+          <p class="small-text">
+            Challenge your mind and explore the fascinating world inside.
+          </p>
+
+          <div class="categories">
+            <span>♟ Mind Games</span>
+            <span>◈ Psychology</span>
+            <span>♧ Puzzles</span>
+            <span>⌘ Mysteries</span>
+          </div>
+
+          <button onclick="showMessage('The Mind is opening...')">
+            Explore the Mind →
+          </button>
+        </article>
+
+
+        <article class="journey-card life-card" id="life">
+          <div class="card-icon">✦</div>
+          <h2>LIFE</h2>
+          <p>Stories. Creativity. Spirit. Meaning.</p>
+          <p class="small-text">
+            Explore experiences, traditions and ideas that make life extraordinary.
+          </p>
+
+          <div class="categories">
+            <span>▤ Stories</span>
+            <span>✋ Handcrafts</span>
+            <span>☼ Spirituality</span>
+            <span>✧ Numerology</span>
+          </div>
+
+          <button onclick="showMessage('Life is opening...')">
+            Explore Life →
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- Discover -->
+    <section class="discover-section">
+      <div class="section-heading">
+        <h2>Discover Something New</h2>
+        <span>View all →</span>
+      </div>
+
+      <div class="discover-grid">
+
+        <article class="discovery-item">
+          <span class="tag">SCENERY</span>
+          <h3>The most beautiful hidden lake you've never seen</h3>
+        </article>
+
+        <article class="discovery-item">
+          <span class="tag">MIND GAME</span>
+          <h3>Can you solve this puzzle?</h3>
+        </article>
+
+        <article class="discovery-item">
+          <span class="tag">CULTURE</span>
+          <h3>A fascinating tradition from another culture</h3>
+        </article>
+
+        <article class="discovery-item">
+          <span class="tag">HANDCRAFTS</span>
+          <h3>Watch how this ancient craft is made</h3>
+        </article>
+
+        <article class="discovery-item">
+          <span class="tag">STORIES</span>
+          <h3>A story that might change how you see life</h3>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- Daily Features -->
+    <section class="daily-grid">
+
+      <article class="daily-card">
+        <div class="daily-icon">🧩</div>
+        <div>
+          <h3>Puzzle of the Day</h3>
+          <p>Try today's challenge and sharpen your mind.</p>
+          <button onclick="showMessage('Puzzle coming soon!')">
+            Play Now →
+          </button>
+        </div>
+      </article>
+
+      <article class="daily-card">
+        <div class="daily-icon">🧠</div>
+        <div>
+          <h3>Test Your Mind</h3>
+          <p>Quizzes, challenges and brain games.</p>
+          <button onclick="showMessage('Mind challenge coming soon!')">
+            Start Playing →
+          </button>
+        </div>
+      </article>
+
+      <article class="daily-card">
+        <div class="daily-icon">?</div>
+        <div>
+          <h3>Question of the Day</h3>
+          <p>A question to make you think differently.</p>
+          <button onclick="showMessage('Here is your question...')">
+            See Today's Question →
+          </button>
+        </div>
+      </article>
+
+      <article class="daily-card">
+        <div class="daily-icon">🎲</div>
+        <div>
+          <h3>Random Discovery</h3>
+          <p>Let Answered Life surprise you.</p>
+          <button onclick="randomDiscovery()">
+            Surprise Me →
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- Discovery Search -->
+    <section class="question-section">
+
+      <h2>What would you like to discover?</h2>
+
+      <p>Ask anything. Or tell us where your curiosity wants to go.</p>
+
+      <div class="discovery-search">
+        <input
+          type="text"
+          id="discoveryInput"
+          placeholder="Try: Show me somewhere beautiful, Give me a mind challenge..."
+        >
+
+        <button onclick="searchDiscovery()">→</button>
       </div>
 
     </section>
 
 
-    <section class="worlds">
+    <!-- Trending -->
+    <section class="trending">
 
-      <a href="#world"
-         class="world-card world">
+      <h2>Trending Now</h2>
 
-        <div class="symbol">🌍</div>
+      <div class="trending-grid">
 
-        <h2>Explore the World</h2>
+        <div class="trend">🔥 Most Explored<br><strong>The Swiss Alps</strong></div>
 
-        <p>
-          Beautiful places, cultures,
-          adventures and hidden stories.
-        </p>
+        <div class="trend">🧠 Most Challenging Puzzle<br><strong>The Impossible Lock</strong></div>
 
-      </a>
+        <div class="trend">🌍 Culture of the Week<br><strong>Polynesian Culture</strong></div>
 
+        <div class="trend">⭐ Story People Love<br><strong>The Letter</strong></div>
 
-      <a href="#mind"
-         class="world-card mind">
+        <div class="trend">🏔 Beautiful Discovery<br><strong>Zhangjiajie, China</strong></div>
 
-        <div class="symbol">🧠</div>
-
-        <h2>Explore the Mind</h2>
-
-        <p>
-          Questions, puzzles, psychology
-          and the mysteries of thought.
-        </p>
-
-      </a>
-
-
-      <a href="#life"
-         class="world-card life">
-
-        <div class="symbol">✨</div>
-
-        <h2>Explore Life</h2>
-
-        <p>
-          Stories, joy, love, creativity,
-          wonder and human experience.
-        </p>
-
-      </a>
-
-    </section>
-
-
-    <section class="surprise">
-
-      <p>Feeling curious?</p>
-
-      <button class="surprise-button"
-              onclick="surpriseMe()">
-
-        ✨ SURPRISE ME ✨
-
-      </button>
+      </div>
 
     </section>
 
   </main>
 
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="footer-intro">
+      <h2>This World Is Still Growing</h2>
+      <p>
+        Answered Life is a place for curiosity, stories, ideas,
+        experiences and discoveries.
+      </p>
+
+      <button onclick="showMessage('More worlds are coming soon!')">
+        See Upcoming Worlds →
+      </button>
+    </div>
+
+
+    <div class="footer-worlds">
+      <h3>Coming and growing:</h3>
+
+      <div>
+        <span>🎵 Music</span>
+        <span>🍜 Food</span>
+        <span>⚗ Science</span>
+        <span>🏛 History</span>
+        <span>🎨 Art</span>
+        <span>🌿 Wildlife</span>
+        <span>🚀 Space</span>
+      </div>
+    </div>
+
+
+    <div class="footer-message">
+      <h2>
+        EXPLORE THE WORLD.<br>
+        EXPLORE THE MIND.<br>
+        EXPLORE LIFE.
+      </h2>
+
+      <p>You never know what you might discover next.</p>
+
+      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        BEGIN EXPLORING →
+      </button>
+    </div>
+
+  </footer>
+
+
   <script src="script.js"></script>
 
 </body>
-  </html>
+    </html>
