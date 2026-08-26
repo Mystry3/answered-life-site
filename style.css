@@ -1231,4 +1231,162 @@ footer {
         font-size: 2.4rem !important;
         letter-spacing: -1px;
     }
-  }
+  }/* ===================================
+   PHASE 1 — CINEMATIC HERO UPGRADE
+   =================================== */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: #05070c;
+}
+
+.hero-panel {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Dark cinematic overlay */
+
+.hero-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.30) 45%,
+            rgba(0,0,0,0.85) 100%
+        );
+}
+
+/* WORLD */
+
+.world-hero {
+    background:
+        linear-gradient(135deg, rgba(11, 80, 65, 0.35), rgba(4, 15, 20, 0.25)),
+        radial-gradient(circle at 30% 35%, rgba(74, 210, 165, 0.30), transparent 35%),
+        linear-gradient(160deg, #174c58 0%, #226d68 35%, #16352d 70%, #07100f 100%);
+}
+
+/* MIND */
+
+.mind-hero {
+    background:
+        radial-gradient(circle at 50% 30%, rgba(110, 150, 255, 0.35), transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(132, 74, 255, 0.25), transparent 45%),
+        linear-gradient(160deg, #101b42 0%, #263f85 40%, #241b50 70%, #090b1b 100%);
+}
+
+/* LIFE */
+
+.life-hero {
+    background:
+        radial-gradient(circle at 60% 30%, rgba(255, 188, 92, 0.32), transparent 30%),
+        linear-gradient(135deg, rgba(198, 92, 45, 0.30), rgba(55, 18, 10, 0.35)),
+        linear-gradient(160deg, #7a3b20 0%, #a75c2e 38%, #5a2615 70%, #1b0d08 100%);
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero-content h1 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: clamp(2.4rem, 4.2vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.world-hero h1 span {
+    color: #69e6af;
+}
+
+.mind-hero h1 span {
+    color: #7daeff;
+}
+
+.life-hero h1 span {
+    color: #ffc76e;
+}
+
+.hero-content p {
+    margin: 0 auto 28px;
+    max-width: 360px;
+    color: rgba(255,255,255,0.82);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.hero-content button {
+    padding: 14px 22px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 999px;
+    background: rgba(5,8,15,0.55);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-content button:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.14);
+}
+
+/* DESKTOP PANEL SEPARATORS */
+
+@media screen and (min-width: 769px) {
+
+    .hero-panel + .hero-panel {
+        border-left: 1px solid rgba(255,255,255,0.10);
+    }
+
+}
+
+/* MOBILE HERO */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .hero-panel {
+        width: 100% !important;
+        min-height: 520px !important;
+        flex: none !important;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        padding: 50px 25px;
+    }
+
+      }
