@@ -1435,21 +1435,33 @@ footer {
 }
 
 /* MOBILE */
+/* MOBILE — SHOW ONE SECTION OF THE ARTWORK PER PANEL */
+
 @media screen and (max-width: 768px) {
 
     .hero-panel {
-        background-size: auto 100%;
+        width: 100% !important;
+        min-height: 700px !important;
+        background-size: 300% 100% !important;
+        background-repeat: no-repeat !important;
     }
 
+    /* WORLD — first third */
     .world-hero {
-        background-position: left center !important;
+        background-position: 0% center !important;
     }
 
+    /* MIND — middle third */
     .mind-hero {
-        background-position: center center !important;
+        background-position: 50% center !important;
     }
 
+    /* LIFE — final third */
     .life-hero {
-        background-position: right center !important;
+        background-position: 100% center !important;
     }
-  }
+
+    .hero-content {
+        padding: 50px 30px;
+    }
+      }
