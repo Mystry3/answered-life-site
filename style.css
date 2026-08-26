@@ -798,4 +798,128 @@ button:hover {
         padding: 28px 24px;
     }
 
+}/* ===================================
+   AI DISCOVERY / SEARCH SECTION
+   =================================== */
+
+.question-section {
+    width: 100%;
+    padding: 100px 6%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(69, 105, 180, 0.28), transparent 45%),
+        linear-gradient(135deg, #10172a 0%, #080b14 55%, #111025 100%);
 }
+
+.question-section h2 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    color: #ffffff;
+}
+
+.question-section p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: rgba(255,255,255,0.65);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* SEARCH BOX */
+
+.discovery-search {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.discovery-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.discovery-search input::placeholder {
+    color: rgba(255,255,255,0.42);
+}
+
+.discovery-search button {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #6e8cff, #4d63e8);
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.discovery-search button:hover {
+    transform: scale(1.06);
+    filter: brightness(1.15);
+}
+
+
+/* ===================================
+   MOBILE SEARCH SECTION
+   =================================== */
+
+@media screen and (max-width: 600px) {
+
+    .question-section {
+        padding: 70px 20px !important;
+    }
+
+    .question-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .question-section p {
+        font-size: 0.95rem;
+    }
+
+    .discovery-search {
+        border-radius: 16px;
+    }
+
+    .discovery-search input {
+        padding: 15px 12px;
+        font-size: 0.85rem;
+    }
+
+    .discovery-search button {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        border-radius: 13px;
+    }
+      }
