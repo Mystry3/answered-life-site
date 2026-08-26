@@ -670,4 +670,132 @@ button:hover {
         min-height: 240px;
     }
 
-  }
+  }/* ===================================
+   DAILY / INTERACTIVE CARDS
+   =================================== */
+
+.daily-grid {
+    width: 100%;
+    padding: 90px 6%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    background: #080b12;
+}
+
+.daily-card {
+    min-width: 0;
+    min-height: 260px;
+    padding: 30px 24px;
+    box-sizing: border-box;
+    border-radius: 22px;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)),
+        #10151f;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    color: #ffffff;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.daily-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,255,255,0.22);
+}
+
+.daily-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    font-size: 1.8rem;
+    background: rgba(255,255,255,0.08);
+}
+
+.daily-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    color: #ffffff;
+}
+
+.daily-card p {
+    margin: 0 0 25px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+}
+
+.daily-card button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #9bbcff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Individual card accents */
+
+.daily-card:nth-child(1) .daily-icon {
+    background: rgba(150, 91, 255, 0.18);
+}
+
+.daily-card:nth-child(1) button {
+    color: #b18cff;
+}
+
+.daily-card:nth-child(2) .daily-icon {
+    background: rgba(70, 150, 255, 0.18);
+}
+
+.daily-card:nth-child(2) button {
+    color: #78adff;
+}
+
+.daily-card:nth-child(3) .daily-icon {
+    background: rgba(255, 170, 70, 0.18);
+}
+
+.daily-card:nth-child(3) button {
+    color: #ffb35c;
+}
+
+.daily-card:nth-child(4) .daily-icon {
+    background: rgba(70, 220, 150, 0.18);
+}
+
+.daily-card:nth-child(4) button {
+    color: #65e0a6;
+}
+
+
+/* ===================================
+   MOBILE DAILY CARDS
+   =================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .daily-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .daily-grid {
+        grid-template-columns: 1fr !important;
+        padding: 60px 20px !important;
+        gap: 16px !important;
+    }
+
+    .daily-card {
+        min-height: auto;
+        padding: 28px 24px;
+    }
+
+}
