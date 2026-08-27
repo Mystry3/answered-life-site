@@ -1491,4 +1491,20 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-          }
+          }.world-hero {
+  background-image: url("images/world.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.mind-hero {
+  background-image: url("images/mind.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.life-hero {
+  background-image: url("images/life.jpg");
+  background-size: cover;
+  background-position: center;
+  }
