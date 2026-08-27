@@ -1464,4 +1464,31 @@ footer {
     .hero-content {
         padding: 50px 30px;
     }
-      }
+      }/* HERO BACKGROUND IMAGES */
+
+.world-hero {
+    background-image:
+        linear-gradient(rgba(5, 8, 22, 0.45), rgba(5, 8, 22, 0.75)),
+        url("images/world.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mind-hero {
+    background-image:
+        linear-gradient(rgba(5, 8, 22, 0.40), rgba(5, 8, 22, 0.78)),
+        url("images/mind.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.life-hero {
+    background-image:
+        linear-gradient(rgba(5, 8, 22, 0.35), rgba(5, 8, 22, 0.75)),
+        url("images/life.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+          }
