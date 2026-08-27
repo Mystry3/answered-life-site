@@ -1507,4 +1507,20 @@ footer {
   background-image: url("images/life.jpg");
   background-size: cover;
   background-position: center;
+  }.world-hero {
+    background:
+        linear-gradient(rgba(5, 8, 22, 0.65), rgba(5, 8, 22, 0.9)),
+        url("images/world.jpg") center/cover no-repeat;
+}
+
+.mind-hero {
+    background:
+        linear-gradient(rgba(5, 8, 22, 0.65), rgba(5, 8, 22, 0.9)),
+        url("images/mind.jpg") center/cover no-repeat;
+}
+
+.life-hero {
+    background:
+        linear-gradient(rgba(5, 8, 22, 0.65), rgba(5, 8, 22, 0.9)),
+        url("images/life.jpg") center/cover no-repeat;
   }
