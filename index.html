@@ -383,7 +383,49 @@ inputtCTYPE html>
   </footer>
 
 
-  <script src="script.js"></script>
+  <script src="script.js"></scrifunction checkPuzzle(answer) {
+    const result = document.getElementById("puzzle-result");
 
-</body>
+    if (answer === "A") {
+        result.textContent = "✨ Correct! A map has cities, forests and rivers—but no houses, trees or water.";
+    } else {
+        result.textContent = "Not quite. Think about something that can show cities, forests and rivers.";
+    }
+}pt>
+  <!-- ===================================
+     MIND EXPERIENCE
+     =================================== -->
+
+<section class="mind-experience" id="mind-games">
+
+    <div class="mind-heading">
+        <span class="detail-tag">THE MIND</span>
+        <h2>Challenge your thinking.</h2>
+        <p>
+            Sometimes the best journey is the one that happens inside your mind.
+        </p>
+    </div>
+
+    <div class="puzzle-card">
+
+        <div class="puzzle-number">PUZZLE OF THE DAY</div>
+
+        <h3>
+            What has cities, but no houses;
+            forests, but no trees;
+            and rivers, but no water?
+        </h3>
+
+        <div class="puzzle-options">
+            <button onclick="checkPuzzle('A')">A. A map</button>
+            <button onclick="checkPuzzle('B')">B. A book</button>
+            <button onclick="checkPuzzle('C')">C. A dream</button>
+            <button onclick="checkPuzzle('D')">D. A photograph</button>
+        </div>
+
+        <p id="puzzle-result"></p>
+
+    </div>
+
+</section>
     </html>
